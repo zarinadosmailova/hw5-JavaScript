@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW6</title>
+</head>
+<body>
+<script type="text/javascript">
+    //task 6-1
+    const x = parseInt(prompt("Insert a count"));
+    let arr = new Array();
+    for (let i = 0; i < x; i++) {
+        arr[i] = parseInt(prompt("Insert a number"));
+    }
+    for (let i = x; i >= 0; i--) {
+        alert(arr[i])
+    }
+</script>
+
+
+<script type="text/javascript">
+    //task 6-2
+    let max = 0
+    const x = parseInt(prompt("Insert a count"));
+    let arr = new Array();
+    for (let i = 0; i < x; i++) {
+        arr[i] = parseInt(prompt("Insert a number"));
+    }
+    for (let i = 0; i < x; i++) {
+        if (max < arr[i]){
+            max = arr[i];
+        }
+    }
+    alert(max)
+</script>
+
+
+<script type="text/javascript">
+    //task 6-3
+    let sum = 0;
+    let cnt = 0;
+    let avg = 1;
+    const x = parseInt(prompt("Insert a count"));
+    let arr = new Array();
+    for (let i = 0; i < x; i++) {
+        arr[i] = parseInt(prompt("Insert a number"));
+    }
+    for (let i = 0; i < x; i++) {
+        sum += arr[i];
+        cnt++
+        avg = sum / cnt;
+    }
+    alert(sum)
+    alert(avg)
+</script>
+
+
+<script type="text/javascript">
+    //task 6-4
+    const x = parseInt(prompt("Insert a count"));
+    let arr = new Array();
+    for (let i = 0; i < x; i++) {
+        arr[i] = parseInt(prompt("Insert a number"));
+    }
+    for (let i = 0; i < x; i++) {
+        alert(arr[i] * arr[i]);
+    }
+</script>
+
+
+<script type="text/javascript">
+    //task 6-5
+    login = prompt("Insert your name:")
+    password = prompt("Insert your password")
+
+    users = [
+        {"login":"ilyas", "password": "qwerty"},
+        {"login":"eldar", "password": "qqqqq"},
+        {"login":"assylkhan", "password": "qweqwe"},
+        {"login":"anel", "password": "asdasd"},
+        {"login":"alibek", "password": "aaaaaa"}
+    ];
+
+    found = false;
+    for (let i = 0; i < users.length; i++) {
+        if (login === users[i]["login"] && password === users[i]["password"]) {
+            found = true;
+            break;
+        }
+    }
+    if (!found)
+        alert("User not found");
+    else
+        alert("Welcome, you are authenticated");
+</script>
+
+
+<script type="text/javascript">
+    //task 6-6
+    author = prompt("Insert author name:")
+
+    books = [
+        {"name":"Harry Potter and the Philosopher's Stone","author":"Joanne Rowling", "isbn":"1233123","price":"50$"},
+        {"name":"Harry Potter and the Prisoner of Azkaban","author":"Joanne Rowling", "isbn":"452323","price":"55$"},
+    ];
+
+    found = false;
+    for (let i = 0; i < books.length; i++) {
+        if (books[i]["author"] === author) {
+            alert(books[i]["name"] + "-" + books[i]["author"] + "-" + books[i]["isbn"] + "-" + books[i]["price"])
+        }
+    }
+</script>
+
+</body>
+</html>
